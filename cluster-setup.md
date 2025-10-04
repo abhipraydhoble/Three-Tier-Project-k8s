@@ -56,13 +56,13 @@ aws configure
 
 **5:Create Amazon EKS cluster using eksctl**
 ````
-eksctl create cluster --name my-ekscluster --region ap-south-1 --version 1.31 --nodegroup-name linux-nodes --node-type t2.medium --nodes 2
+eksctl create cluster --name k8s-ekscluster --region ap-southeast-1 --version 1.33 --nodegroup-name linux-nodes --node-type t3.medium --nodes 2
 ````
 **6: Log In Into EKS cluster**
 ````
-aws eks update-kubeconfig --name my-ekscluster
+aws eks update-kubeconfig --name k8s-ekscluster
 ````
 **7: Delete EKS Cluster**
 ````
-eksctl delete cluster --name my-ekscluster --region ap-south-1
+eksctl delete cluster --name k8s-ekscluster --region ap-southeast-1
 ````
